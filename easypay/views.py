@@ -11,18 +11,18 @@ def index(request):
     return render(request,'index.html')
 
 def details(request):
-    if request.method=='POST':
-        name=request.POST.get('username')
-        amount=request.POST.get('amount')
-        insertdb=payments(username=name,ammount=amount)
-        insertdb.save()
-        params={'name':name , 'amount':amount}
-        ''' 
-        for i in r_list:
-            if name==i:
-                return HttpResponse("SUCH WORDS ARE NOT ALLOWED ")
-        '''
-        return render(request,'pin.html',params)
+    # if request.method=='POST':
+    #     name=request.POST.get('username')
+    #     amount=request.POST.get('amount')
+    #     insertdb=payments(username=name,ammount=amount)
+    #     insertdb.save()
+    #     params={'name':name , 'amount':amount}
+    #     ''' 
+    #     for i in r_list:
+    #         if name==i:
+    #             return HttpResponse("SUCH WORDS ARE NOT ALLOWED ")
+        # '''
+        return render(request,'pin.html')
 
 def payment(request):
     if request.method=='POST':
