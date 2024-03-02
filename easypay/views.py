@@ -21,8 +21,15 @@ def details(request):
     #     for i in r_list:
     #         if name==i:
     #             return HttpResponse("SUCH WORDS ARE NOT ALLOWED ")
-        # '''
-        return render(request,'pin.html')
+    
+    # '''
+    name='saurabh'
+    amount=100
+
+
+    context={'name':name , 'amount':amount} 
+    return render(request,'pin.html',context)
+
 
 def payment(request):
     if request.method=='POST':
